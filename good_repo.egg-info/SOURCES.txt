@@ -1,9 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-app/main.py
-good_repo.egg-info/PKG-INFO
-good_repo.egg-info/SOURCES.txt
-good_repo.egg-info/dependency_links.txt
-good_repo.egg-info/requires.txt
-good_repo.egg-info/top_level.txt
