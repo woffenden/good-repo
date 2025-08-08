@@ -33,7 +33,7 @@ jobs:
 
       - name: Set Up Container Structure Test
         id: setup_container_structure_test
-        uses: ministryofjustice/analytical-platform-github-actions/setup-container-structure-test@004873b0a8f11830eeb097ab36621af2f20cb4d4 # v3.2.1
+        uses: ministryofjustice/analytical-platform-github-actions/setup-container-structure-test@949059b3345aaf08170204e57a010324f03a985b # v4.5.0
 
       - name: Build
         id: build
