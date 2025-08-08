@@ -8,7 +8,7 @@ FROM ghcr.io/astral-sh/uv:python3.13-alpine@sha256:66fc613d6880444f8593aa0a15871
 # Stage: builder
 # From: docker.io/python:3.13-alpine3.21
 ##################################################
-FROM docker.io/python:3.13-alpine3.21@sha256:763eee4b5cf4dfcfbf76a5a5f8177317ac531c635b855cdc5a95e17fe1e4a44d AS builder
+FROM docker.io/python:3.13-alpine3.21@sha256:f5f25747d6589917174824189a07ed31051ec6312a7e069a7c3498bbc935f0c3 AS builder
 
 WORKDIR /app
 
@@ -27,7 +27,7 @@ EOF
 ##################################################
 #checkov:skip=CKV_DOCKER_2: HEALTHCHECK not required
 
-FROM docker.io/python:3.13-alpine3.21@sha256:763eee4b5cf4dfcfbf76a5a5f8177317ac531c635b855cdc5a95e17fe1e4a44d AS final
+FROM docker.io/python:3.13-alpine3.21@sha256:f5f25747d6589917174824189a07ed31051ec6312a7e069a7c3498bbc935f0c3 AS final
 
 LABEL org.opencontainers.image.vendor="Woffenden" \
       org.opencontainers.image.authors="Platform Engineering (platform-engineering@woffenden.io)" \
