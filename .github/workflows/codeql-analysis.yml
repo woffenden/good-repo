@@ -14,39 +14,9 @@ permissions: {}
 jobs:
   codeql-analysis:
     name: CodeQL Analysis
-    runs-on: ubuntu-latest
     permissions:
       contents: read
       security-events: write
-    strategy:
-      fail-fast: false
-      matrix:
-        language: ["actions", "python"]
-    steps:
-      - name: Monitor GitHub Actions Permissions
-        id: monitor_permissions
-        uses: GitHubSecurityLab/actions-permissions/monitor@31cf7361439cbdffbc73a3bb138b7e1662d46c9b # v1.0.2-beta6
-
-      - name: Harden Runner
-        id: harden_runner
-        uses: step-security/harden-runner@6c439dc8bdf85cadbbce9ed30d1c7b959517bc49 # v2.12.2
-        with:
-          egress-policy: audit
-
-      - name: Checkout
-        id: checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          persist-credentials: false
-
-      - name: Initialise CodeQL
-        id: init_codeql
-        uses: github/codeql-action/init@181d5eefc20863364f96762470ba6f862bdef56b # v3.29.2
-        with:
-          languages: ${{ matrix.language }}
-
-      - name: CodeQL Analysis
-        id: codeql_analysis
-        uses: github/codeql-action/analyze@181d5eefc20863364f96762470ba6f862bdef56b # v3.29.2
-        with:
-          category: "language:${{ matrix.language }}"
+    uses: ministryofjustice/analytical-platform-github-actions/.github/workflows/reusable-codeql-analysis.yml@1c5fdfdd5d791b91c74eb04a7781b2988370113c # v4.6.0
+    with:
+      languages: '["actions", "python"]'
