@@ -3,19 +3,22 @@
   "image": "ghcr.io/ministryofjustice/devcontainer-base:latest",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/ministryofjustice/devcontainer-feature/astral:1": {}
+    "ghcr.io/ministryofjustice/devcontainer-feature/astral:1": {},
+    "ghcr.io/ministryofjustice/devcontainer-feature/container-structure-test:1": {},
+    "ghcr.io/ministryofjustice/devcontainer-feature/static-analysis:1": {}
   },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "customizations": {
     "vscode": {
       "extensions": [
+        "charliermarsh.ruff",
         "EditorConfig.EditorConfig",
         "GitHub.copilot",
         "GitHub.copilot-chat",
         "GitHub.vscode-github-actions",
         "GitHub.vscode-pull-request-github",
-        "streetsidesoftware.code-spell-checker",
-        "charliermarsh.ruff"
+        "ms-python.python",
+        "streetsidesoftware.code-spell-checker"
       ],
       "settings": {
         "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",

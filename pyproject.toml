@@ -3,16 +3,16 @@ name = "good-repo"
 version = "0.0.1"
 description = "Proof of Concept of a good repository"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 dependencies = [
     "flask==3.1.1",
 ]
 
 [dependency-groups]
 dev = [
-    "pre-commit==4.2.0",
-    "ruff==0.11.11",
-    "zizmor==1.8.0",
+    "pre-commit==4.3.0",
+    "ruff==0.12.9",
+    "zizmor==1.12.1",
 ]
 
 [tool.ruff.lint]

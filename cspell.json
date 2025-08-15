@@ -11,6 +11,7 @@
     "pyproject",
     "sarif",
     "venv",
+    "woffenden",
     "zizmor"
   ]
 }
