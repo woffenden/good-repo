@@ -56,7 +56,7 @@ EOF
 
 WORKDIR ${APP_HOME}
 COPY --from=builder --chown=${CONTAINER_UID}:${CONTAINER_GID} /app/.venv /app/.venv
-COPY --chown=${CONTAINER_UID}:${CONTAINER_GID} main.py /app
+COPY --chown=${CONTAINER_UID}:${CONTAINER_GID} app/ /app
 
 USER ${CONTAINER_UID}
 
